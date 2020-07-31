@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Raleway&family=Roboto+Mono&display=swap');
+
+html {
+    --color-text: rgb(233, 233, 233);
+    --bg: linear-gradient(180deg, white 10%, rgb(226, 226, 226) 30%, rgb(22, 54, 83), rgb(7, 8, 71));
+    --title-color: #004f7c;
+
+}
+
+body {
+    height: 100vh;
+    background: var(--bg);
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+hr {
+    width: 30%;
+    border: double black;
+}
+
+#title {
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: 700;
+    color: var(--title-color);
+    font-size: 3em;
+}
+
+section {
+    /* background-image: url(./letter-d.png);
+    size: 100% 100%; */
+    justify-self: center;
+
+}
+
+#img-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px
+}
+
+img{
+    display: flex;
+    height: auto;
+    max-width: 30%;
+    /* user story #8 */
+    flex: 0 1 auto;
+    /* user story #9 */
+    align-items: center;
+    padding: 10px;
+    border: 15px double rgb(0,0,0);
+    
+}
+
+#img-caption {
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 1.5em;
+    color: white;
+}
+
+#tribute-info {
+    display: flex;
+    width: 60vw;
+    margin: 10px;
+    text-indent: 10px;
+    color: var(--color-text);
+    padding-bottom: 20px;
+}
+
+a {
+    color: gray;
+}
+
+
