@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Raleway&family=Roboto+Mono&display=swap');
+
+html {
+    --color-text: rgb(233, 233, 233);
+    --bg: linear-gradient(145deg, white 10%, rgb(172, 172, 172) 30%, rgb(53, 68, 82), rgb(6, 8, 10));
+    --title-color: #004f7c;
+
+}
+
+body {
+    height: 100vh;
+    background: var(--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    font-family: 'Comfortaa', sans-serif;
+    font-size: .75em;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#title {
+    font-family: 'Railway', sans-serif;
+    font-size: 2.5em;
+}
+
+hr {
+    border: inset black;
+    width: 30%;
+}
+
+#description {
+    color: #ffffff;
+}
+
+.user-story-11 {
+    font-family: 'Roboto Mono', sans-serif;
+}
+
+#survey-form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    padding-top: 15px;
+}
+
+
+
+
+
+
+
+
+
+.radio-row {
+    display: flex;
+    justify-content: space-between;
+}
+.check-row {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+#feedback {
+    height: 150px;
+}
