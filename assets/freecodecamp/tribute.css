@@ -45,8 +45,8 @@ section {
     padding: 10px
 }
 
-img{
-    display: flex;
+img {
+    display: block;
     height: auto;
     max-width: 30%;
     /* user story #8 */
