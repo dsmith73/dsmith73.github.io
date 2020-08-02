@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Raleway&family=Roboto+Mono&display=swap');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    --color-text: rgb(26, 26, 26);
+    --bg: rgb(230, 230, 230);
+    --title-color: #004f7c;
+    --nav-back: rgb(73, 73, 73);
+    --nav-text: #fff;
+    --btn-back: rgb(66, 255, 19);
+    --btn-text: rgb(0, 0, 0);
+    --border-color: rgb(139, 0, 0);
+}
+
+body {
+    background: var(--bg);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;    
+    font-family: 'Raleway', sans-serif;
+    padding-left: 20vw;
+    width: 80vw;
+}
+
+h2 {
+    font-family: 'Raleway', sans-serif;
+}
+
+
+
+
+
+
+#navbar {
+    font-family: 'Raleway', sans-serif;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    background: var(--nav-back);
+    color: var(--nav-text);
+    text-decoration: none;
+    text-align: left;
+    overflow: hidden;
+    position: fixed;
+    width: 13vw;
+    height: 100vh;
+    font-weight: 500;
+    border-right: 4px double var(--border-color);
+}
+
+#navbar a {
+    display: flex;
+    color: var(--nav-text);
+    box-shadow: 0 3px 12px rgba(15, 15, 15, 0.5);
+    padding-left: 15px;
+    align-items: center;
+    margin: 10px 0px 10px 0px;
+    height: 2em;
+    padding-top: 3px;
+    cursor: pointer;
+}
+
+#navbar a:hover {
+    background: var(--btn-back);
+    color: var(--btn-text);
+    box-shadow: 0 5px 15px rgba(0,0,0, 0.8);
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s;
+}
+
+
+
+.main-section {
+    border-bottom: 2px solid var(--border-color);
+    padding: 20px 0px 20px 10px;
+    width: 70vw;
+
+}
+
+header {
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+#navbar header {
+    align-self: center;
+}
+
+p {
+    padding: 5px;
+}
+
+@media (max-width: 767px) { 
+    body {
+        overflow-x: hidden;
+    }
+
+    #navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0px 10px 0px 0px;
+        margin: 0px 0px 0px 0px;
+        align-items: center;
+        position: relative;
+        width: 95vw;
+        height: 5vh;
+    }
+    
+    .nav-link {
+        display: hidden;
+    }
+
+    #navbar a {
+        height: 1em;
+        align-content: center;
+    }
+
+    .main {
+        padding-top: 5vw;
+        padding-left: 10px;
+        width: 100vw;
+    }
+
+    .main-section {
+        padding: 10px 0px 10px 50px;
+        width: 88vw;
+    }
+}
