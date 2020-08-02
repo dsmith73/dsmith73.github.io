@@ -86,19 +86,19 @@ hr {
 
 }
 
-.project-title {
+.project-tile {
     border-bottom: 1px solid black;
     width: 70vw;
     font-family: 'Roboto Mono', sans-serif;
 }
 
-.project-title header {
+.project-tile header {
     margin: 10px 0px 10px 0px;
     font-size: 1.5em;
     font-weight: 600;
 }
 
-.project-title p {
+.project-tile p {
     padding: 5px;
 }
 
