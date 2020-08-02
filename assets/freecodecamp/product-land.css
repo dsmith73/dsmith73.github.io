@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Raleway&family=Roboto+Mono&display=swap');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    --color-text: rgb(233, 233, 233);
+    --bg: linear-gradient(145deg, white 10%, rgb(172, 172, 172) 30%, rgb(53, 68, 82), rgb(6, 8, 10));
+    --title-color: #004f7c;
+    --nav-back: linear-gradient(180deg, rgb(0, 0, 0) 70%, rgb(36, 36, 36), rgb(255, 255, 255));
+    --btn-back: #000000;
+    --btn-text: white;
+    --btn-back-hov: #085c8d;
+    --btn-text-hov: #ffd900;
+    --btn-back-hov-sm: #072c41;
+    --btn-text-hov-sm: #ffc400;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background: var(--bg);
+    overflow-y: scroll;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;    
+    font-family: 'Raleway', sans-serif;
+    width: 100vw;
+}
+
+h2 {
+    font-family: 'Raleway', sans-serif;
+}
+
+.head {
+    background: var(--nav-back);
+    height: fit-content;
+
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px 30px 0px 15px;
+}
+
+#header-img {
+    display: block;
+    size: 30px;
+    border: 2px double white;
+}
+
+
+#nav-bar {
+    float: left;
+    display: block;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+nav a {
+    background: var(--btn-back);
+    color: var(--btn-text);
+    margin-left: 3px;
+    margin-right: 3px;
+    height: 20px;
+    width: 65px;
+    box-shadow: 0 5px 15px rgba(0,0,0, 0.5);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav a:hover {
+    background: var(--btn-back-hov);
+    color: var(--btn-text-hov);
+    font-size: 1rem;
+    transition: .3s;
+}
+
+@media only screen and (max-width: 600px) {
+    nav a:hover {
+        background: var(--btn-back-hov-sm);
+        color: var(--btn-text-hov-sm);
+        font-size: 1rem;
+        transition: .3s;
+    }
+
+}
+
+/* 
+User Story #13: The navbar should always be at the top of the viewport.
+
+User Story #14: My product landing page should have at least one media query.
+
+User Story #15: My product landing page should utilize CSS flexbox at least once.
+*/
+
+.content-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+table {
+    border: 1px solid rgba(0,0,0, .5);
+}
+
+tr {
+    border: 1px dashed rgba(0,0,0, .5);
+}
+
+td {
+    padding: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+form input {
+    font-family: 'Roboto Mono', sans-serif;
+}
+
+.foot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.foot a {
+    color: var(--color-text);
+}
