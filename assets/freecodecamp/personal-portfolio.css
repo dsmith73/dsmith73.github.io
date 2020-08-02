@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Raleway&family=Roboto+Mono&display=swap');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    --color-text: rgb(26, 26, 26);
+    --bg: rgb(230, 230, 230);
+    --title-color: #004f7c;
+    --nav-back: rgb(73, 73, 73);
+    --nav-text: #fff;
+    --btn-back: rgb(66, 255, 19);
+    --btn-text: rgb(0, 0, 0);
+    --border-color: rgb(139, 0, 0);
+}
+
+body {
+    background: var(--bg);
+    overflow: auto;
+}
+
+#welcome-section {
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+    height: 100vh;
+}
+
+#welcome-section h1 {
+    padding-top: 8vh;
+    font-weight: 700;
+    font-size: 2.25em;
+}
+
+hr {
+    border: 2px dashed var(--border-color);
+    width: 70vw;
+}
+
+.nav {
+    font-family: 'Comfortaa', sans-serif;
+    display: flex;
+    flex-direction: row;
+    background: var(--nav-back);
+    color: var(--nav-text);
+    text-decoration: none;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px 0px 10px;
+    position: fixed;
+    width: 100%;
+    height: 7vh;
+    font-weight: 500;
+    border-bottom: 4px double var(--border-color);
+}
+
+#navbar a {
+    color: var(--nav-text);
+    box-shadow: 0 3px 12px rgba(15, 15, 15, 0.5);
+    text-align: center;
+    padding: 10px;
+    margin: 2px 5px 2px 5px;
+    height: 1.5em;
+    padding-top: 3px;
+    cursor: pointer;
+}
+
+#navbar a:hover {
+    background: var(--btn-back);
+    color: var(--btn-text);
+    box-shadow: 0 5px 15px rgba(0,0,0, 0.8);
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s;
+}
+
+#projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+
+}
+
+.project-title {
+    border-bottom: 1px solid black;
+    width: 70vw;
+    font-family: 'Roboto Mono', sans-serif;
+}
+
+.project-title header {
+    margin: 10px 0px 10px 0px;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.project-title p {
+    padding: 5px;
+}
+
+.foot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+@media (max-width: 767px) { 
+    .nav {
+        padding: 0px 10px 0px 0px;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        height: 5vh;
+    }
+
+    .nav h2 {
+        font-weight: 400;
+    }
+    
+    #navbar a {
+        height: 1em;
+        align-content: center;
+    }
+
+    .main-section {
+        padding: 10px 0px 10px 50px;
+        width: 88vw;
+    }
+}
