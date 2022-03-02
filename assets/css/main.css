@@ -1919,7 +1919,8 @@ input, select, textarea {
 				}
 
 					#titleBar .toggle:after {
-						content: '';
+						content: '=';
+						text-align: center;
 						display: block;
 						position: absolute;
 						top: 6px;
