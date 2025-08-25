@@ -82,7 +82,7 @@ input, select, textarea {
 
 	body {
 		background: #14171a /* url("images/bg03.jpg") */;
-		color: #aa193b;
+		color: #00041c;
 		font-size: 13.5pt;
 		font-family: 'Roboto';
 		line-height: 1.85em;
@@ -90,9 +90,9 @@ input, select, textarea {
 	}
 
 	input, textarea, select {
-		color: #0b1416;
+		color: #00041c;
 		font-size: 13.5pt;
-		font-family: 'Yanone Kaffeesatz';
+		font-family: 'Roboto';
 		line-height: 1.85em;
 		font-weight: 300;
 	}
