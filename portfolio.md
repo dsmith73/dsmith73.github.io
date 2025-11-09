@@ -23,20 +23,20 @@ As **Head of Information Technology at IronCircle**, I lead initiatives that int
 
 ## Key Achievements
 
-### 🚀 Digital Transformation & Automation
+### Digital Transformation & Automation
 - Automated onboarding, offboarding, and auditing at **IronCircle** using Ansible, reducing manual workload by **50%+** and cutting ticket volume by **36%**.  
 - Implemented **MACH (Microservices, API-first, Cloud, Headless)** architecture, improving scalability and performance while reducing platform license costs by **$800K annually**.  
 - Deployed **AI-powered ticket ingestion and guided resolutions** using OpenAI, Gemini, and Anthropic models.
 
-### 🧠 AI & Innovation Leadership
+### AI & Innovation Leadership
 - Partnered with the **CTO of ChatSesame** to co-develop an **AI IT Support Agent** leveraging multi-model LLM integration with Atlassian and Slack.  
 - Deployed **Tier 0 AI Agents** to autonomously resolve repetitive incidents, improving SLA compliance and operational uptime.
 
-### 🛡️ Security, Governance & Compliance
+### Security, Governance & Compliance
 - Developed and deployed **Zero Trust** and **RBAC** frameworks, improving SOC II and HITRUST alignment.  
 - Automated **SOX audit controls**, password/token rotations, and data lifecycle management across enterprise platforms.
 
-### 👥 Leadership & Culture
+### Leadership & Culture
 - Built and mentored global teams achieving **4.98/5 NPS** satisfaction scores.  
 - Introduced cross-training, certification tiers, and promotion paths to drive retention and capability growth.  
 - Fostered a culture of innovation and collaboration across IT, security, and engineering teams.
