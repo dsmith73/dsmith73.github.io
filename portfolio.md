@@ -1,8 +1,7 @@
 ---
 layout: default
-title: "Daniel Smith"
+title: ""
 permalink: /portfolio/
-hide_title: true
 ---
 
 
