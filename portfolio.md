@@ -4,6 +4,12 @@ title: ""
 permalink: /portfolio/
 ---
 
+<style>
+.page-title, header h1 a, .post-title a {
+  display: none;
+}
+</style>
+
 
 
 # Daniel Smith  
