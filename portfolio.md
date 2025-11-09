@@ -1,3 +1,12 @@
+---
+layout: default
+title: "Daniel Smith"
+permalink: /portfolio/
+hide_title: true
+---
+
+
+
 # Daniel Smith  
 **Technology Executive | Digital Transformation | Automation & AI Strategy**  
 Indianapolis, IN · [LinkedIn](https://linkedin.com/in/dsmith73) · [GitHub](https://dsmith73.github.io) · drs73@protonmail.com
