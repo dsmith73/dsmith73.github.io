@@ -1,0 +1,224 @@
+/* ===================================
+   SHARED STYLESHEET
+   Works for both index.html and resume.html
+   =================================== */
+
+:root {
+    --primary-color: #6d4aff;       /* Your purple brand */
+    --secondary-color: #4a3ab8;
+    --text-dark: #1a1a1a;
+    --text-light: #555;
+    --bg-white: #ffffff;
+    --bg-light: #f8f9fa;
+    --border-gray: #e0e0e0;
+    --accent-green: #28a745;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background: var(--bg-white);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* HERO SECTION (Both pages) */
+.hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.tagline {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+}
+
+.contact-links {
+    font-size: 0.95rem;
+}
+
+.contact-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 0.75rem;
+}
+
+.contact-links a:hover {
+    text-decoration: underline;
+}
+
+/* SECTIONS (Both pages) */
+section {
+    padding: 3rem 2rem;
+    border-bottom: 1px solid var(--border-gray);
+}
+
+section h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+/* PROJECTS (Homepage only) */
+.projects article {
+    margin-bottom: 2rem;
+}
+
+.projects img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+/* EXPERTISE CARDS (Homepage only) */
+.expertise .competencies {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.competency {
+    background: var(--bg-light);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.competency h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+/* INTERESTS (Homepage only) */
+.interests .interest-item {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.interests img {
+    max-width: 100px;
+    margin-bottom: 1rem;
+}
+
+/* RESUME-SPECIFIC STYLES (resume.html) */
+.leadership-scope table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+}
+
+.leadership-scope th, 
+.leadership-scope td {
+    border: 1px solid var(--border-gray);
+    padding: 1rem;
+    text-align: left;
+}
+
+.leadership-scope th {
+    background: var(--bg-light);
+}
+
+.achievement-list {
+    list-style: none;
+}
+
+.achievement-list li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-gray);
+}
+
+.achievement-list strong {
+    color: var(--primary-color);
+}
+
+details.role-card {
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-gray);
+    border-radius: 8px;
+}
+
+details.role-card summary {
+    padding: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    background: var(--bg-white);
+}
+
+details.role-card .role-details {
+    padding: 1rem;
+    border-top: 1px solid var(--border-gray);
+    background: var(--bg-light);
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+}
+
+.skill-tags li {
+    background: var(--bg-light);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* PHILOSOPHY SECTION (Homepage only) */
+.philosophy {
+    text-align: center;
+    background: var(--bg-light);
+}
+
+.philosophy blockquote {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.philosophy p {
+    max-width: 600px;
+    margin: 0 auto 1rem;
+}
+
+/* FOOTER (Both pages) */
+.footer {
+    background: var(--text-dark);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+.footer a {
+    color: var(--primary-color);
+}
+
+/* RESPONSIVE (Both pages) */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2rem; }
+    .tagline { font-size: 1rem; }
+    .container { padding: 0 1rem; }
+    section { padding: 2rem 1rem; }
+    .competency { font-size: 0.95rem; }
+}
