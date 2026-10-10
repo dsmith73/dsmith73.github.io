@@ -1,164 +1,232 @@
-<!DOCTYPE html>
-<html lang="en">
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <script
-        src="https://www.datadoghq-browser-agent.com/datadog-rum-v3.js"
-        type="text/javascript">
-    </script>
-    <script>
-        window.DD_RUM && window.DD_RUM.init({
-        applicationId: 'fdca706e-f71b-4068-8d41-81a789dc7ed8',
-        clientToken: 'pubf895bbe10777b5ec8d6e3ede5f01ab2d',
-        site: 'datadoghq.com',
-        service:'dsmith73',
-        env:'prod',
-        // Specify a version number to identify the deployed version of your application in Datadog 
-        // version: '1.0.0',
-        sampleRate: 100,
-        trackInteractions: true
-        });
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO & Search Optimization -->
-    <title>Daniel Smith | Technology Executive | Indianapolis</title>
-    <meta name="description" content="VP-level technology leader with 20+ years driving automation, AI, and digital transformation. Former Head of IT at 120Water, IronCircle, Rolls-Royce.">
-    <meta name="keywords" content="Technology Executive, VP of IT, CIO, IT Strategy, Cybersecurity, Digital Transformation">
-    
-    <!-- CRITICAL: CSS PATH MUST MATCH EXACTLY -->
-    <link rel="stylesheet" href="assets/css/main.css">
-    
-    <!-- Optional: Font Awesome (if you use it) -->
-    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-</head>
-<body>
-    <!-- HERO SECTION - KEEP YOUR PERSONALITY -->
-    <header class="hero">
-        <h1><a href="index.html">Daniel Smith</a></h1>
-        <p class="tagline">Empower people. Simplify systems. Let technology handle the rest.</p>
-        <nav class="contact-links">
-            <a href="mailto:drs73@protonmail.com">Email</a>
-            <span>|</span>
-            <a href="https://linkedin.com/in/dsmith73" target="_blank">LinkedIn</a>
-            <span>|</span>
-            <a href="resume.html">Resume</a>
-            <span>|</span>
-            <a href="https://github.com/dsmith73" target="_blank">GitHub</a>
-        </nav>
-    </header>
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Daniel Smith | Technology Executive</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		
+		<!-- SEO -->
+		<meta name="description" content="VP-level technology leader with 20+ years driving automation, AI, and digital transformation.">
+		<meta name="keywords" content="Technology Executive, VP of IT, CIO, IT Strategy, Cybersecurity">
+		
+		<!-- CSS (Correct Path) -->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+		
+		<!-- Datadog Monitoring -->
+		<script src="https://www.datadoghq-browser-agent.com/datadog-rum-v3.js" type="text/javascript"></script>
+		<script>
+		    window.DD_RUM && window.DD_RUM.init({
+		        applicationId: 'fdca706e-f71b-4068-8d41-81a789dc7ed8',
+		        clientToken: 'pubf895bbe10777b5ec8d6e3ede5f01ab2d',
+		        site: 'datadoghq.com',
+		        service:'dsmith73',
+		        env:'prod',
+		        sampleRate: 100,
+		        trackInteractions: true
+		    });
+		</script>
+	</head>
+	<body>
+		<div id="page-wrapper">
 
-    <!-- PROJECT SHOWCASES - KEEP AS-IS (Shows technical depth) -->
-    <section class="projects">
-        <article>
-            <h2>KB</h2>
-            <img src="images/doc-mgmt.jpg" alt="Document management system interface">
-            <p>A simple document management repo project to be referenced from Prometheus or other monitoring projects.</p>
-        </article>
+			<!-- Header -->
+				<section id="header">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+								<!-- Logo -->
+									<h1><a href="index.html" id="logo">Daniel Smith</a></h1>
 
-        <article>
-            <h2>101101 Org</h2>
-            <img src="images/101101.jpg" alt="Palindrome team project showcase">
-            <p>Created the project page for the palindrome team at 101101. They use this page to showcase their work.</p>
-        </article>
+								<!-- Navigation -->
+									<nav id="nav">
+										<a href="about.html">About</a>
+										<a href="https://101101.github.io">My work with 101101</a>
+										<a href="resume.html">Resume</a>
+										<a href="https://dsmith73.github.io/dsapps/" target="_blank">My PWA</a>
+									</nav>
+							</div>
+						</div>
+					</div>
+					<div id="banner">
+						<div class="container">
+							<div class="row">
+								<div class="col-6 col-12-medium">
+									<p>Empower people. Simplify systems. Let technology <br />handle the rest.</p>
+								</div>
+								<div class="col-6 col-12-medium imp-medium">
+									<a href="apps.html"><video autoplay muted loop id="circuit" width="100%">
+										<source src="images/circuit-2.mp4" type="video/mp4">
+										Your browser does not support HTML5 video.
+									</video></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
 
-        <article>
-            <h2>Long-Thanh Restaurant</h2>
-            <img src="images/long-thanh.jpg" alt="Restaurant website screenshot">
-            <p>Developed a new, more responsive website for the owner of Long-Thanh; a Vietnamese restaurant in Indianapolis, with amazing Pho.</p>
-        </article>
+			<!-- Features -->
+				<section id="features">
+					<div class="container">
+						<div class="row">
+							<div class="col-3 col-6-medium col-12-small">
+								<section>
+									<a href="doc-mgmt.html" class="bordered-feature-image"><img src="images/doc-mgmt.jpg" alt="KB Project" /></a>
+									<h2>KB</h2>
+									<p>A simple document management repo project to be referenced from Prometheus or other monitoring projects.</p>
+								</section>
+							</div>
 
-        <article>
-            <h2>Markdown Template Maker</h2>
-            <img src="images/md-tmpl-mk.jpg" alt="Template generation interface">
-            <p>Web-app that can be used to create markdown template files (.md) from your code, to improve documentation of code, services, products, etc...</p>
-        </article>
-    </section>
+							<div class="col-3 col-6-medium col-12-small">
+								<section>
+									<a href="https://101101.github.io" class="bordered-feature-image"><img src="images/101101.jpg" alt="101101 Org" /></a>
+									<h2>101101 Org</h2>
+									<p>Created the project page for the palindrome team at 101101. They use this page to showcase their work.</p>
+								</section>
+							</div>
+							
+							<div class="col-3 col-6-medium col-12-small">
+								<section>
+									<a href="https://dsmith73.github.io/long-thanh" class="bordered-feature-image"><img src="images/long-thanh.jpg" alt="Long-Thanh Restaurant" /></a>
+									<h2>Long-Thanh Restaurant</h2>
+									<p>Developed a new, more responsive website for the owner of Long-Thanh; a Vietnamese restaurant in Indianapolis, with amazing Pho.</p>
+								</section>
+							</div>
+							
+							<div class="col-3 col-6-medium col-12-small">
+								<section>
+									<a href="https://dsmith73.github.io/toolbox/js/md-maker/index.html" class="bordered-feature-image"><img src="images/md-tmpl-mk.jpg" alt="Markdown Template Maker" /></a>
+									<h2>Markdown Template Maker</h2>
+									<p>Web-app that can be used to create markdown template files (.md) from your code, to improve documentation of code, services, products, etc...</p>
+								</section>
+							</div>
+						</div>
+					</div>
+				</section>
 
-    <!-- WHO AM I? SECTION - ENHANCED FOR VP POSITIONING -->
-    <section class="about">
-        <h2>Who am I?</h2>
-        <p class="intro">I'm a passionate, innovative, and determined person, on a journey of continuous learning.</p>
-        
-        <div class="bio-highlight">
-            <img src="images/the-code.jpg" alt="Conceptual representation of code/systems">
-            <p>VP-level technology leader with over twenty years of diverse industry experience. I'm an expert in driving automation, AI adoption, and digital transformation that delivers measurable efficiency, cost savings, and security improvements. Previously led IT functions at <strong>120Water</strong>, <strong>IronCircle</strong>, <strong>Rolls-Royce</strong>, and <strong>KAR Global</strong>.</p>
-        </div>
-    </section>
+			<!-- Content -->
+				<section id="content">
+					<div class="container">
+						<div class="row aln-center">
+							<div class="col-4 col-12-medium">
+								<!-- Box #1: Who am I? -->
+								<section>
+									<header>
+										<h2>Who am I?</h2>
+										<h3>I'm a passionate, innovative, and determined person, on a journey of continuous learning.</h3>
+									</header>
+									<a href="resume.html" class="feature-image"><img src="images/the-code.jpg" alt="How I'm programmed" /></a>
+									<p>
+										VP-level technology leader with over twenty years of diverse industry experience. I'm an expert in driving automation, AI adoption, and digital transformation that delivers measurable efficiency, cost savings, and security improvements. Previously led IT functions at <strong>120Water</strong>, <strong>IronCircle</strong>, <strong>Rolls-Royce</strong>, and <strong>KAR Global</strong>.
+									</p>
+								</section>
+							</div>
+							<div class="col-4 col-6-medium col-12-small">
+								<!-- Box #2: What do I do? -->
+								<section>
+									<header>
+										<h2>What do I do?</h2>
+										<h3>Technology Executive | VP of IT · CIO Track</h3>
+									</header>
+									<ul class="list">
+										<li><strong>Current:</strong> 120Water - Head of Infrastructure, IT & Security</li>
+										<li><strong>Past:</strong> IronCircle - Head of Information Technology</li>
+										<li><strong>Past:</strong> Deft - Director of Engineering Operations</li>
+										<li><strong>Past:</strong> KAR Global - Senior Manager, Enterprise Operations</li>
+										<li><strong>Past:</strong> Rolls-Royce - Regional Manager, IT Strategy & Delivery</li>
+										<li><strong>Budget Scope:</strong> Up to $3.2M annually | <strong>Teams:</strong> 65+ global staff</li>
+									</ul>
+									<br />
+									<a href="/assets/Daniel_Smith_Executive_Portfolio.pdf" target="_blank" rel="noopener" class="button">Download Executive Portfolio (PDF)</a>
+								</section>
+							</div>
+							<div class="col-4 col-6-medium col-12-small">
+								<!-- Box #3: What interests me? -->
+								<section>
+									<header>
+										<h2>What interests me?</h2>
+									</header>
+									<ul class="quote-list">
+										<li>
+											<a href="https://julialang.org/" target="_blank"><img src="images/julia.png" alt="" /></a>
+											<p><strong>Analytics & Probability</strong></p>
+											<span>Using data-driven insights to predict outages and forecast capacity</span>
+										</li>
+										<li>
+											<img src="images/automation-gears.jpg" alt="" />
+											<p><strong>"Automation"</strong></p>
+											<span>Treating repeatable processes as code — eliminating toil</span>
+										</li>
+										<li>
+											<a href="apps.html"><img src="images/key-code.jpg" alt="" /></a>
+											<p><strong>"Programming"</strong></p>
+											<span>From Terraform to Python scripts, hands-on technical depth</span>
+										</li>
+									</ul>
+								</section>
+							</div>
+						</div>
+					</div>
+				</section>
 
-    <!-- WHAT DO I DO? SECTION - FILLED IN -->
-    <!-- Box #2 - Enhanced with VP keywords -->
-    <section>
-        <header>
-            <h2>What do I do?</h2>
-            <h3>Technology Executive | VP of IT · CIO Track</h3>
-        </header>
-        <ul class="list">
-            <li><strong>Current:</strong> 120Water - Head of Infrastructure, IT & Security</li>
-            <li><strong>Past:</strong> IronCircle - Head of Information Technology</li>
-            <li><strong>Past:</strong> Deft - Director of Engineering Operations</li>
-            <li><strong>Past:</strong> KAR Global - Senior Manager, Enterprise Operations</li>
-            <li><strong>Past:</strong> Rolls-Royce - Regional Manager, IT Strategy & Delivery</li>
-            <li><strong>Budget Scope:</strong> Up to $3.2M annually | <strong>Teams:</strong> 65+ global staff</li>
-        </ul>
-        <br />
-        <a href="/assets/Daniel_Smith_Executive_Portfolio.pdf" target="_blank" rel="noopener" class="button">Download Executive Portfolio (PDF)</a>
-    </section>
+			<!-- Footer -->
+				<section id="footer">
+					<div class="container">
+						<div class="row">
+							<div class="col-4 col-12-medium">
+								<section>
+									<h2>Connect</h2>
+									<div>
+										<div class="row">
+											<div class="col-4 col-12-small">
+												<ul class="link-list last-child">
+													<li><a href="https://github.com/dsmith73" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+													<li><a href="https://gitlab.com/dsmith73" class="icon brands style2 fa-gitlab"><span class="label">GitLab</span></a></li>
+												</ul>
+											</div>
+											<div class="col-4 col-12-small">
+												<ul class="link-list last-child">
+													<li><a href="https://www.linkedin.com/in/dsmith73" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+													<li><a href="mailto:drs73@protonmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+												</ul>
+											</div>
+											<div class="col-4 col-12-small">
+												<ul class="link-list last-child">
+													<li><a href="resume.html" class="icon solid style2 fa-file"><span class="label">Resume</span></a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</section>
+							</div>
+							<div class="col-6 col-12-medium imp-medium">
+								<section>
+									<h2><quote>"Courage is a kind of salvation" – Plato</quote></h2>
+									<p>
+										I selected this quote because it reminds me that we must have courage in our hearts. Whether or not we would normally do something, we must, within us, hold the power to act and be willing to follow through with something, no matter how fearful we may be of the outcome. 
+										<br /><br />
+										I challenge you to step outside your comfort zone, live your life, face your fears, and accept greatness into your heart. 
+									</p>
+								</section>
+							</div>
+						</div>
+					</div>
+				</section>
+				
+			<!-- Copyright -->
+				<div id="copyright">
+					&copy; dsmith73 - All rights reserved. | Design: <a href="http://html5up.net">HTML5 UP</a>
+				</div>
+		</div>
+		
+		<!-- Scripts (REQUIRED for HTML5 UP layout) -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
 
-    <!-- WHAT INTERESTS ME? SECTION - CAPTIONS ADDED -->
-    <section class="interests">
-        <h2>What interests me?</h2>
-        
-        <article class="interest-item">
-            <img src="images/julia.png" alt="Data visualization or analytical graph">
-            <h3>Analytics & Probability</h3>
-            <p>Using data-driven insights to predict outages, forecast capacity needs, and validate investment decisions.</p>
-        </article>
-
-        <article class="interest-item">
-            <img src="images/automation-gears.jpg" alt="Mechanical gears symbolizing automation">
-            <h3>"Automation"</h3>
-            <p>Treating repeatable processes as code — automating early, iterating continuously, eliminating toil.</p>
-        </article>
-
-        <article class="interest-item">
-            <img src="images/key-code.jpg" alt="Keyboard or coding interface">
-            <h3>"Programming"</h3>
-            <p>From Terraform to Python scripts, hands-on technical depth informs better architectural decisions.</p>
-        </article>
-    </section>
-
-    <!-- LINKS SECTION - POPULATED -->
-    <section class="links">
-        <h2>Connect</h2>
-        <ul>
-            <li><a href="https://linkedin.com/in/dsmith73" target="_blank">LinkedIn Profile</a></li>
-            <li><a href="resume.html" target="_blank">Full Resume (PDF Download Available)</a></li>
-            <li><a href="https://github.com/dsmith73" target="_blank">GitHub Projects</a></li>
-            <li><a href="mailto:drs73@protonmail.com">Email: drs73@protonmail.com</a></li>
-        </ul>
-    </section>
-
-    <!-- PHILOSOPHY SECTION - KEEP THE PLATO QUOTE -->
-    <section class="philosophy">
-        <blockquote>"Courage is a kind of salvation" – Plato</blockquote>
-        <p class="quote-context">I selected this quote because it reminds me that we must have courage in our hearts. Whether or not we would normally do something, we must, within us, hold the power to act and be willing to follow through with something, no matter how fearful we may be of the outcome.</p>
-        <p class="challenge">I challenge you to step outside your comfort zone, live your life, face your fears, and accept greatness into your heart.</p>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="col-3 col-12-small">
-            <ul class="link-list last-child">
-                <li></li>
-                <li><a href="https://www.linkedin.com/in/dsmith73" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
-                <li><a href="mailto:drs73@protonmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
-                <li><a href="resume.html" class="icon solid style2 fa-file"><span class="label">Resume</span></a></li>
-                <li></li>
-            </ul>
-        </div>        
-    </footer>
-</body>
+	</body>
 </html>
