@@ -1,10 +1,10 @@
 /* ===================================
-   SHARED STYLESHEET
+   DANIEL SMITH - SHARED STYLESHEET
    Works for both index.html and resume.html
    =================================== */
 
 :root {
-    --primary-color: #6d4aff;       /* Your purple brand */
+    --primary-color: #6d4aff;
     --secondary-color: #4a3ab8;
     --text-dark: #1a1a1a;
     --text-light: #555;
@@ -33,7 +33,9 @@ body {
     padding: 0 2rem;
 }
 
-/* HERO SECTION (Both pages) */
+/* ===================================
+   HERO SECTION (Both pages)
+   =================================== */
 .hero {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     color: white;
@@ -60,13 +62,19 @@ body {
     color: white;
     text-decoration: none;
     margin: 0 0.75rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.2s;
 }
 
 .contact-links a:hover {
-    text-decoration: underline;
+    background-color: rgba(255, 255, 255, 0.2);
+    text-decoration: none;
 }
 
-/* SECTIONS (Both pages) */
+/* ===================================
+   SECTIONS (Both pages)
+   =================================== */
 section {
     padding: 3rem 2rem;
     border-bottom: 1px solid var(--border-gray);
@@ -78,7 +86,9 @@ section h2 {
     color: var(--primary-color);
 }
 
-/* PROJECTS (Homepage only) */
+/* ===================================
+   HOMEPAGE-SPECIFIC (index.html)
+   =================================== */
 .projects article {
     margin-bottom: 2rem;
 }
@@ -88,9 +98,9 @@ section h2 {
     height: auto;
     border-radius: 8px;
     margin: 1rem 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* EXPERTISE CARDS (Homepage only) */
 .expertise .competencies {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -102,25 +112,79 @@ section h2 {
     padding: 1.5rem;
     border-radius: 8px;
     border-left: 4px solid var(--primary-color);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.competency:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .competency h3 {
     color: var(--primary-color);
     margin-bottom: 0.5rem;
+    font-size: 1.25rem;
 }
 
-/* INTERESTS (Homepage only) */
 .interests .interest-item {
     text-align: center;
     margin-bottom: 2rem;
 }
 
 .interests img {
-    max-width: 100px;
+    max-width: 120px;
     margin-bottom: 1rem;
 }
 
-/* RESUME-SPECIFIC STYLES (resume.html) */
+.links ul {
+    list-style: none;
+}
+
+.links ul li {
+    margin-bottom: 0.5rem;
+}
+
+.links ul li a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.links ul li a:hover {
+    text-decoration: underline;
+}
+
+.philosophy {
+    text-align: center;
+    background: var(--bg-light);
+}
+
+.philosophy blockquote {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.philosophy p {
+    max-width: 600px;
+    margin: 0 auto 1rem;
+}
+
+.about .bio-highlight {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.about .bio-highlight img {
+    max-width: 200px;
+    border-radius: 8px;
+}
+
+/* ===================================
+   RESUME-SPECIFIC (resume.html)
+   =================================== */
 .leadership-scope table {
     width: 100%;
     border-collapse: collapse;
@@ -136,6 +200,7 @@ section h2 {
 
 .leadership-scope th {
     background: var(--bg-light);
+    font-weight: 600;
 }
 
 .achievement-list {
@@ -155,70 +220,4 @@ details.role-card {
     margin-bottom: 1rem;
     border: 1px solid var(--border-gray);
     border-radius: 8px;
-}
-
-details.role-card summary {
-    padding: 1rem;
-    cursor: pointer;
-    font-weight: 600;
-    background: var(--bg-white);
-}
-
-details.role-card .role-details {
-    padding: 1rem;
-    border-top: 1px solid var(--border-gray);
-    background: var(--bg-light);
-}
-
-.skill-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    list-style: none;
-}
-
-.skill-tags li {
-    background: var(--bg-light);
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
-}
-
-/* PHILOSOPHY SECTION (Homepage only) */
-.philosophy {
-    text-align: center;
-    background: var(--bg-light);
-}
-
-.philosophy blockquote {
-    font-size: 1.5rem;
-    font-style: italic;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
-
-.philosophy p {
-    max-width: 600px;
-    margin: 0 auto 1rem;
-}
-
-/* FOOTER (Both pages) */
-.footer {
-    background: var(--text-dark);
-    color: white;
-    text-align: center;
-    padding: 2rem;
-}
-
-.footer a {
-    color: var(--primary-color);
-}
-
-/* RESPONSIVE (Both pages) */
-@media (max-width: 768px) {
-    .hero h1 { font-size: 2rem; }
-    .tagline { font-size: 1rem; }
-    .container { padding: 0 1rem; }
-    section { padding: 2rem 1rem; }
-    .competency { font-size: 0.95rem; }
-}
+    transiti
