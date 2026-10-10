@@ -1,532 +1,269 @@
 /* ===================================
-   DANIEL SMITH - EXECUTIVE PORTFOLIO
-   Unified stylesheet for index.html + resume.html
-   Based on HTML5 UP framework
+   DANIEL SMITH - EXECUTIVE OVERRIDES
+   High-specificity CSS to override HTML5 UP framework
    =================================== */
 
-@import url('fontawesome-all.min.css');
-
-/* Color Variables - Professional Executive Theme */
+/* FORCE ROOT VARIABLES */
 :root {
-    --primary-color: #6d4aff;           /* Proton-inspired purple */
-    --primary-light: #8b7fff;
-    --primary-dark: #4a3ab8;
-    --text-dark: #1a1a1a;
-    --text-light: #555555;
-    --bg-white: #ffffff;
-    --bg-light: #f8f9fa;
-    --bg-offwhite: #fafafa;
-    --border-gray: #e0e0e0;
-    --success-green: #28a745;
-    --warning-orange: #ffc107;
+    --primary-color: #6d4aff !important;
+    --primary-light: #8b7fff !important;
+    --primary-dark: #4a3ab8 !important;
+    --text-dark: #1a1a1a !important;
+    --bg-white: #ffffff !important;
+    --bg-light: #f8f9fa !important;
 }
 
-/* Reset & Base */
+/* OVERRIDE ALL HEADINGS */
+#header h1, h1, h2, h3, h4, h5, h6 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    font-weight: 700 !important;
+}
+
+#header h1 {
+    font-size: 2.75rem !important;
+    color: white !important;
+}
+
+/* HEADER SECTION - FORCED PURPLE GRADIENT */
+#header {
+    background: linear-gradient(135deg, #6d4aff 0%, #4a3ab8 100%) !important;
+    color: white !important;
+}
+
+#header h1, #header h1 a, #header a#logo {
+    color: white !important;
+}
+
+#header p {
+    color: white !important;
+}
+
+/* NAVIGATION LINKS */
+#nav a {
+    color: white !important;
+    font-weight: 600 !important;
+}
+
+#nav a:hover {
+    color: white !important;
+    text-decoration: underline !important;
+}
+
+/* BANNER SECTION */
+#banner {
+    background: rgba(109, 74, 255, 0.1) !important;
+}
+
+/* FEATURES GRID - WHITE BACKGROUNDS */
+#features {
+    background: #ffffff !important;
+}
+
+.bordered-feature-image {
+    border-radius: 8px !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+.bordered-feature-image img {
+    width: 100% !important;
+    height: auto !important;
+}
+
+#features h2 {
+    color: #6d4aff !important;
+    font-size: 1.5rem !important;
+}
+
+/* CONTENT SECTION - CLEAN WHITESPACE */
+#content {
+    background: #ffffff !important;
+}
+
+#content h2 {
+    color: #6d4aff !important;
+    font-size: 1.75rem !important;
+}
+
+#content h3 {
+    color: #555 !important;
+    font-weight: 500 !important;
+}
+
+/* LIST STYLING - NO DEFAULT MARKERS */
+.list, .quote-list, .link-list {
+    list-style: none !important;
+    padding-left: 0 !important;
+}
+
+.list li {
+    padding: 0.75rem 0 !important;
+    border-bottom: 1px solid #e0e0e0 !important;
+}
+
+.list li:last-child {
+    border-bottom: none !important;
+}
+
+/* FOOTER SECTION */
+#footer {
+    background: #f8f9fa !important;
+    border-top: 3px solid #6d4aff !important;
+}
+
+#footer h2 {
+    color: #6d4aff !important;
+    font-size: 1.5rem !important;
+}
+
+.link-list a {
+    color: #6d4aff !important;
+    font-weight: 500 !important;
+}
+
+/* COPYRIGHT BAR */
+#copyright {
+    background: #1a1a1a !important;
+    color: white !important;
+}
+
+#copyright a {
+    color: #6d4aff !important;
+}
+
+/* BUTTONS - PRIMARY COLOR */
+.button, input[type="submit"], input[type="reset"], button {
+    background: #6d4aff !important;
+    color: white !important;
+    border: none !important;
+    font-weight: 600 !important;
+    padding: 0.75rem 1.5rem !important;
+    border-radius: 4px !important;
+}
+
+.button:hover, button:hover {
+    background: #4a3ab8 !important;
+    color: white !important;
+}
+
+/* RESPONSIVE FIXES */
+@media (max-width: 736px) {
+    #header h1 {
+        font-size: 2rem !important;
+    }
+    
+    #nav {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+    }
+    
+    #nav a {
+        margin: 0.25rem !important;
+        padding: 0.4rem 0.8rem !important;
+    }
+}
+
+/* CLEAR ANY OLD STYLES THAT MIGHT COME FROM OTHER FILES */
 * {
-    box-sizing: border-box;
-}
-
-body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-    line-height: 1.7;
-    color: var(--text-dark);
-    background: var(--bg-white);
     margin: 0;
     padding: 0;
 }
 
-a {
-    color: var(--primary-color);
-    text-decoration: none;
-    transition: color 0.2s ease;
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif !important;
+    line-height: 1.7 !important;
 }
 
-a:hover {
-    color: var(--primary-dark);
-    text-decoration: underline;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 600;
-    color: var(--text-dark);
-    margin-bottom: 0.75rem;
-}
-
-h1 { font-size: 2.5rem; }
-h2 { font-size: 1.75rem; color: var(--primary-color); }
-h3 { font-size: 1.25rem; }
-
-p { margin-bottom: 1rem; }
-
-/* Container & Grid System (Preserve HTML5 UP) */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -1rem;
-}
-
-.row > * {
-    padding: 0 1rem;
-}
-
-.col-12 { width: 100%; }
-.col-6 { width: 50%; }
-.col-4 { width: 33.333%; }
-.col-3 { width: 25%; }
-
-@media (max-width: 980px) {
-    .col-3 { width: 50%; }
-    .col-6 { width: 100%; }
-}
-
-@media (max-width: 736px) {
-    .col-3 { width: 100%; }
-    .col-6 { width: 100%; }
-}
-
-/* ===================================
-   HEADER SECTION (Both Pages)
-   =================================== */
-#header {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
-    color: white;
-    padding: 3rem 0;
-    text-align: center;
-    position: relative;
-}
-
-#header h1 {
-    color: white;
-    font-size: 2.75rem;
-    margin-bottom: 0.5rem;
-}
-
-#header #logo {
-    color: white !important;
-    text-decoration: none;
-    font-weight: 700;
-}
-
-#header #logo:hover {
-    text-decoration: underline;
-    color: white;
-}
-
-#header .tagline {
-    font-size: 1.25rem;
-    opacity: 0.95;
-    margin-bottom: 1.5rem;
-}
-
-#nav {
-    margin-top: 1.5rem;
-}
-
-#nav a {
-    color: white;
-    margin: 0 1rem;
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    transition: background-color 0.2s;
-}
-
-#nav a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    text-decoration: none;
-    color: white;
-}
-
-/* Banner/Video Section (Homepage only) */
-#banner {
-    background: rgba(0, 0, 0, 0.1);
-    padding: 2rem 0;
-}
-
-#banner p {
-    color: white;
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
-}
-
-#circuit {
-    max-width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* ===================================
-   FEATURES SECTION (Homepage Projects)
-   =================================== */
-#features {
-    padding: 4rem 0;
-    background: var(--bg-light);
-}
-
-.bordered-feature-image {
-    display: block;
-    margin: 0 auto 1rem;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.bordered-feature-image:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-}
-
-.bordered-feature-image img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-/* ===================================
-   CONTENT SECTION (Homepage About/Expertise)
-   =================================== */
-#content {
-    padding: 4rem 0;
-    background: var(--bg-white);
-}
-
-.feature-image {
-    display: block;
-    margin: 0 auto 1rem;
-    border-radius: 8px;
-    max-width: 100%;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.list {
-    list-style: none;
-    padding: 0;
-    margin: 1rem 0;
-}
-
-.list li {
-    padding: 0.5rem 0;
-    border-bottom: 1px solid var(--border-gray);
-}
-
-.list li:last-child {
-    border-bottom: none;
-}
-
-.quote-list {
-    list-style: none;
-    padding: 0;
-    margin: 1rem 0;
-}
-
-.quote-list li {
-    text-align: center;
-    margin-bottom: 1.5rem;
-}
-
-.quote-list img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 0.5rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* ===================================
-   RESUME-SPECIFIC STYLES
-   =================================== */
-.leadership-scope {
-    margin: 2rem 0;
-}
-
+/* RESUME-SPECIFIC: TABLE STYLING */
 .leadership-scope table {
-    width: 100%;
-    border-collapse: collapse;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    width: 100% !important;
+    border-collapse: collapse !important;
+    margin: 2rem 0 !important;
 }
 
 .leadership-scope th,
 .leadership-scope td {
-    border: 1px solid var(--border-gray);
-    padding: 1rem;
-    text-align: left;
+    border: 1px solid #e0e0e0 !important;
+    padding: 1rem !important;
+    text-align: left !important;
 }
 
 .leadership-scope th {
-    background: var(--primary-color);
-    color: white;
-    font-weight: 600;
+    background: #6d4aff !important;
+    color: white !important;
 }
 
 .leadership-scope tr:nth-child(even) {
-    background: var(--bg-light);
+    background: #f8f9fa !important;
 }
 
-.achievement-list {
-    list-style: none;
-    margin: 2rem 0;
-}
-
-.achievement-list li {
-    padding: 1rem;
-    border-bottom: 1px solid var(--border-gray);
-}
-
-.achievement-list strong {
-    color: var(--primary-color);
-    font-weight: 600;
-}
-
+/* COLLAPSIBLE CARDS FOR EXPERIENCE */
 details.role-card {
-    margin-bottom: 1rem;
-    border: 1px solid var(--border-gray);
-    border-radius: 8px;
-    background: var(--bg-white);
-    transition: box-shadow 0.2s;
-}
-
-details.role-card:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 1rem !important;
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 8px !important;
+    background: white !important;
 }
 
 details.role-card summary {
-    padding: 1.25rem;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 1.1rem;
-    background: var(--bg-light);
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-details.role-card summary::-webkit-details-marker {
-    display: none;
-}
-
-details.role-card summary::after {
-    content: '▼';
-    color: var(--primary-color);
-    font-size: 0.8rem;
-    transition: transform 0.2s;
-}
-
-details[open].role-card summary::after {
-    transform: rotate(180deg);
+    background: #f8f9fa !important;
+    font-weight: 600 !important;
+    padding: 1rem !important;
+    cursor: pointer !important;
 }
 
 details.role-card .role-details {
-    padding: 1.25rem;
-    border-top: 1px solid var(--border-gray);
-    background: var(--bg-offwhite);
-}
-
-.details-role-card .role-details ul {
-    margin-left: 1.5rem;
-}
-
-.skill-groups {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    margin: 2rem 0;
-}
-
-.skill-group {
-    background: var(--bg-light);
-    padding: 1.5rem;
-    border-radius: 8px;
-    border-left: 4px solid var(--primary-color);
-}
-
-.skill-group h3 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
+    padding: 1rem !important;
+    background: #fafafa !important;
 }
 
 .skill-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    list-style: none;
-    padding: 0;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.5rem !important;
 }
 
 .skill-tags li {
-    background: white;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    border: 1px solid var(--border-gray);
+    background: #f8f9fa !important;
+    padding: 0.5rem 1rem !important;
+    border-radius: 20px !important;
+    font-size: 0.85rem !important;
+    border: 1px solid #e0e0e0 !important;
 }
 
-/* ===================================
-   FOOTER (Both Pages)
-   =================================== */
-#footer {
-    padding: 3rem 0;
-    background: var(--bg-light);
-    border-top: 1px solid var(--border-gray);
+/* IMAGE STYLING */
+img {
+    max-width: 100% !important;
+    height: auto !important;
 }
 
-.link-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.feature-image img, .bordered-feature-image img {
+    border-radius: 8px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
 }
 
-.link-list li {
-    margin-bottom: 0.5rem;
+/* VIDEO ELEMENT */
+#circuit {
+    max-width: 100% !important;
+    border-radius: 8px !important;
 }
 
-.icon {
-    display: inline-block;
-    margin-right: 0.5rem;
+/* SPACING BETWEEN SECTIONS */
+section {
+    margin-bottom: 2rem !important;
 }
 
-.style2 {
-    color: var(--primary-color);
+.container {
+    padding: 0 2rem !important;
 }
 
-#copyright {
-    background: var(--text-dark);
-    color: white;
-    padding: 1.5rem 0;
-    text-align: center;
-    font-size: 0.9rem;
+/* REMOVE ANY BLUE HYPERLINK DEFAULTS */
+a {
+    color: #6d4aff !important;
+    text-decoration: none !important;
 }
 
-#copyright a {
-    color: var(--primary-color);
-}
-
-/* ===================================
-   BUTTON STYLES
-   =================================== */
-.button, input[type="submit"], input[type="reset"], button {
-    display: inline-block;
-    background: var(--primary-color);
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 4px;
-    font-weight: 600;
-    cursor: pointer;
-    text-decoration: none;
-    transition: background-color 0.2s;
-}
-
-.button:hover, input[type="submit"]:hover {
-    background: var(--primary-dark);
-    text-decoration: none;
-    color: white;
-}
-
-.button.alt {
-    background: transparent;
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
-}
-
-.button.alt:hover {
-    background: var(--primary-color);
-    color: white;
-}
-
-/* ===================================
-   RESPONSIVE DESIGN
-   =================================== */
-@media (max-width: 980px) {
-    .row > * {
-        padding: 0 0.5rem;
-    }
-    
-    .container {
-        padding: 0 1rem;
-    }
-    
-    h1 { font-size: 2rem; }
-    h2 { font-size: 1.5rem; }
-    
-    #header {
-        padding: 2rem 1rem;
-    }
-}
-
-@media (max-width: 736px) {
-    h1 { font-size: 1.75rem; }
-    h2 { font-size: 1.25rem; }
-    
-    #header h1 {
-        font-size: 1.75rem;
-    }
-    
-    #nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.5rem;
-    }
-    
-    #nav a {
-        margin: 0.25rem;
-        padding: 0.4rem 0.8rem;
-        font-size: 0.9rem;
-    }
-    
-    .skill-groups {
-        grid-template-columns: 1fr;
-    }
-    
-    details.role-card summary {
-        font-size: 1rem;
-        padding: 1rem;
-    }
-}
-
-/* ===================================
-   PRINT STYLESHEET
-   =================================== */
-@media print {
-    #header {
-        background: white !important;
-        color: black !important;
-        padding: 1rem 0 !important;
-    }
-    
-    #header h1 {
-        color: black !important;
-    }
-    
-    #header #logo {
-        color: black !important;
-    }
-    
-    #nav {
-        display: none !important;
-    }
-    
-    details.role-card {
-        border: 1px solid #ccc !important;
-        page-break-inside: avoid;
-    }
-    
-    details.role-card summary {
-        background: #f0f0f0 !important;
-        color: black !important;
-    }
-    
-    a {
-        color: black !important;
-        text-decoration: none !important;
-    }
+a:hover {
+    text-decoration: underline !important;
 }
