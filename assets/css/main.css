@@ -4,13 +4,18 @@
    =================================== */
 
 /* FORCE ROOT VARIABLES */
+/* STEEL BLUE / SLATE GREY EXECUTIVE PALETTE */
 :root {
-    --primary-color: #6d4aff !important;
-    --primary-light: #8b7fff !important;
-    --primary-dark: #4a3ab8 !important;
-    --text-dark: #1a1a1a !important;
-    --bg-white: #ffffff !important;
-    --bg-light: #f8f9fa !important;
+    --primary-color: #2e5c8a;      /* steel blue */
+    --primary-dark: #1f4468;      /* navy */
+    --primary-light: #4a7fb5;
+    --accent-grey: #64748b;       /* slate */
+    --text-dark: #1e293b;
+    --text-light: #475569;
+    --bg-white: #ffffff;
+    --bg-light: #f1f5f9;          /* light slate wash */
+    --bg-offwhite: #f8fafc;
+    --border-gray: #cbd5e1;
 }
 
 /* OVERRIDE ALL HEADINGS */
