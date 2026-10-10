@@ -1,197 +1,259 @@
 /* ===================================
-   DANIEL SMITH - SHARED STYLESHEET
-   Works for both index.html and resume.html
+   DANIEL SMITH - EXECUTIVE PORTFOLIO
+   Unified stylesheet for index.html + resume.html
+   Based on HTML5 UP framework
    =================================== */
 
+@import url('fontawesome-all.min.css');
+
+/* Color Variables - Professional Executive Theme */
 :root {
-    --primary-color: #6d4aff;
-    --secondary-color: #4a3ab8;
+    --primary-color: #6d4aff;           /* Proton-inspired purple */
+    --primary-light: #8b7fff;
+    --primary-dark: #4a3ab8;
     --text-dark: #1a1a1a;
-    --text-light: #555;
+    --text-light: #555555;
     --bg-white: #ffffff;
     --bg-light: #f8f9fa;
+    --bg-offwhite: #fafafa;
     --border-gray: #e0e0e0;
-    --accent-green: #28a745;
+    --success-green: #28a745;
+    --warning-orange: #ffc107;
 }
 
+/* Reset & Base */
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-    line-height: 1.6;
+    line-height: 1.7;
     color: var(--text-dark);
     background: var(--bg-white);
+    margin: 0;
+    padding: 0;
 }
 
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 0.75rem;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 1.75rem; color: var(--primary-color); }
+h3 { font-size: 1.25rem; }
+
+p { margin-bottom: 1rem; }
+
+/* Container & Grid System (Preserve HTML5 UP) */
 .container {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
 }
 
-/* ===================================
-   HERO SECTION (Both pages)
-   =================================== */
-.hero {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-    color: white;
-    padding: 3rem 2rem;
-    text-align: center;
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1rem;
 }
 
-.hero h1 {
-    font-size: 2.5rem;
+.row > * {
+    padding: 0 1rem;
+}
+
+.col-12 { width: 100%; }
+.col-6 { width: 50%; }
+.col-4 { width: 33.333%; }
+.col-3 { width: 25%; }
+
+@media (max-width: 980px) {
+    .col-3 { width: 50%; }
+    .col-6 { width: 100%; }
+}
+
+@media (max-width: 736px) {
+    .col-3 { width: 100%; }
+    .col-6 { width: 100%; }
+}
+
+/* ===================================
+   HEADER SECTION (Both Pages)
+   =================================== */
+#header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+    position: relative;
+}
+
+#header h1 {
+    color: white;
+    font-size: 2.75rem;
     margin-bottom: 0.5rem;
 }
 
-.tagline {
+#header #logo {
+    color: white !important;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+#header #logo:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+#header .tagline {
     font-size: 1.25rem;
-    opacity: 0.9;
+    opacity: 0.95;
     margin-bottom: 1.5rem;
 }
 
-.contact-links {
-    font-size: 0.95rem;
+#nav {
+    margin-top: 1.5rem;
 }
 
-.contact-links a {
+#nav a {
     color: white;
-    text-decoration: none;
-    margin: 0 0.75rem;
+    margin: 0 1rem;
+    font-weight: 500;
     padding: 0.5rem 1rem;
     border-radius: 4px;
     transition: background-color 0.2s;
 }
 
-.contact-links a:hover {
+#nav a:hover {
     background-color: rgba(255, 255, 255, 0.2);
     text-decoration: none;
+    color: white;
 }
 
-/* ===================================
-   SECTIONS (Both pages)
-   =================================== */
-section {
-    padding: 3rem 2rem;
-    border-bottom: 1px solid var(--border-gray);
+/* Banner/Video Section (Homepage only) */
+#banner {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 2rem 0;
 }
 
-section h2 {
-    font-size: 1.75rem;
-    margin-bottom: 1.5rem;
-    color: var(--primary-color);
+#banner p {
+    color: white;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
 }
 
-/* ===================================
-   HOMEPAGE-SPECIFIC (index.html)
-   =================================== */
-.projects article {
-    margin-bottom: 2rem;
-}
-
-.projects img {
+#circuit {
     max-width: 100%;
-    height: auto;
     border-radius: 8px;
-    margin: 1rem 0;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
-.expertise .competencies {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-}
-
-.competency {
+/* ===================================
+   FEATURES SECTION (Homepage Projects)
+   =================================== */
+#features {
+    padding: 4rem 0;
     background: var(--bg-light);
-    padding: 1.5rem;
+}
+
+.bordered-feature-image {
+    display: block;
+    margin: 0 auto 1rem;
     border-radius: 8px;
-    border-left: 4px solid var(--primary-color);
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.competency:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+.bordered-feature-image:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
-.competency h3 {
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-    font-size: 1.25rem;
-}
-
-.interests .interest-item {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.interests img {
-    max-width: 120px;
-    margin-bottom: 1rem;
-}
-
-.links ul {
-    list-style: none;
-}
-
-.links ul li {
-    margin-bottom: 0.5rem;
-}
-
-.links ul li a {
-    color: var(--primary-color);
-    text-decoration: none;
-}
-
-.links ul li a:hover {
-    text-decoration: underline;
-}
-
-.philosophy {
-    text-align: center;
-    background: var(--bg-light);
-}
-
-.philosophy blockquote {
-    font-size: 1.5rem;
-    font-style: italic;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
-
-.philosophy p {
-    max-width: 600px;
-    margin: 0 auto 1rem;
-}
-
-.about .bio-highlight {
-    display: flex;
-    gap: 2rem;
-    align-items: flex-start;
-    flex-wrap: wrap;
-}
-
-.about .bio-highlight img {
-    max-width: 200px;
-    border-radius: 8px;
+.bordered-feature-image img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 /* ===================================
-   RESUME-SPECIFIC (resume.html)
+   CONTENT SECTION (Homepage About/Expertise)
    =================================== */
-.leadership-scope table {
-    width: 100%;
-    border-collapse: collapse;
+#content {
+    padding: 4rem 0;
+    background: var(--bg-white);
+}
+
+.feature-image {
+    display: block;
+    margin: 0 auto 1rem;
+    border-radius: 8px;
+    max-width: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border-gray);
+}
+
+.list li:last-child {
+    border-bottom: none;
+}
+
+.quote-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.quote-list li {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.quote-list img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ===================================
+   RESUME-SPECIFIC STYLES
+   =================================== */
+.leadership-scope {
     margin: 2rem 0;
 }
 
-.leadership-scope th, 
+.leadership-scope table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.leadership-scope th,
 .leadership-scope td {
     border: 1px solid var(--border-gray);
     padding: 1rem;
@@ -199,25 +261,272 @@ section h2 {
 }
 
 .leadership-scope th {
-    background: var(--bg-light);
+    background: var(--primary-color);
+    color: white;
     font-weight: 600;
+}
+
+.leadership-scope tr:nth-child(even) {
+    background: var(--bg-light);
 }
 
 .achievement-list {
     list-style: none;
+    margin: 2rem 0;
 }
 
 .achievement-list li {
-    padding: 0.75rem 0;
+    padding: 1rem;
     border-bottom: 1px solid var(--border-gray);
 }
 
 .achievement-list strong {
     color: var(--primary-color);
+    font-weight: 600;
 }
 
 details.role-card {
     margin-bottom: 1rem;
     border: 1px solid var(--border-gray);
     border-radius: 8px;
-    transiti
+    background: var(--bg-white);
+    transition: box-shadow 0.2s;
+}
+
+details.role-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+details.role-card summary {
+    padding: 1.25rem;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.1rem;
+    background: var(--bg-light);
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+details.role-card summary::-webkit-details-marker {
+    display: none;
+}
+
+details.role-card summary::after {
+    content: '▼';
+    color: var(--primary-color);
+    font-size: 0.8rem;
+    transition: transform 0.2s;
+}
+
+details[open].role-card summary::after {
+    transform: rotate(180deg);
+}
+
+details.role-card .role-details {
+    padding: 1.25rem;
+    border-top: 1px solid var(--border-gray);
+    background: var(--bg-offwhite);
+}
+
+.details-role-card .role-details ul {
+    margin-left: 1.5rem;
+}
+
+.skill-groups {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.skill-group {
+    background: var(--bg-light);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.skill-group h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+}
+
+.skill-tags li {
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    border: 1px solid var(--border-gray);
+}
+
+/* ===================================
+   FOOTER (Both Pages)
+   =================================== */
+#footer {
+    padding: 3rem 0;
+    background: var(--bg-light);
+    border-top: 1px solid var(--border-gray);
+}
+
+.link-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.link-list li {
+    margin-bottom: 0.5rem;
+}
+
+.icon {
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+.style2 {
+    color: var(--primary-color);
+}
+
+#copyright {
+    background: var(--text-dark);
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+#copyright a {
+    color: var(--primary-color);
+}
+
+/* ===================================
+   BUTTON STYLES
+   =================================== */
+.button, input[type="submit"], input[type="reset"], button {
+    display: inline-block;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.button:hover, input[type="submit"]:hover {
+    background: var(--primary-dark);
+    text-decoration: none;
+    color: white;
+}
+
+.button.alt {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.button.alt:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+@media (max-width: 980px) {
+    .row > * {
+        padding: 0 0.5rem;
+    }
+    
+    .container {
+        padding: 0 1rem;
+    }
+    
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+    
+    #header {
+        padding: 2rem 1rem;
+    }
+}
+
+@media (max-width: 736px) {
+    h1 { font-size: 1.75rem; }
+    h2 { font-size: 1.25rem; }
+    
+    #header h1 {
+        font-size: 1.75rem;
+    }
+    
+    #nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    
+    #nav a {
+        margin: 0.25rem;
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    .skill-groups {
+        grid-template-columns: 1fr;
+    }
+    
+    details.role-card summary {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+}
+
+/* ===================================
+   PRINT STYLESHEET
+   =================================== */
+@media print {
+    #header {
+        background: white !important;
+        color: black !important;
+        padding: 1rem 0 !important;
+    }
+    
+    #header h1 {
+        color: black !important;
+    }
+    
+    #header #logo {
+        color: black !important;
+    }
+    
+    #nav {
+        display: none !important;
+    }
+    
+    details.role-card {
+        border: 1px solid #ccc !important;
+        page-break-inside: avoid;
+    }
+    
+    details.role-card summary {
+        background: #f0f0f0 !important;
+        color: black !important;
+    }
+    
+    a {
+        color: black !important;
+        text-decoration: none !important;
+    }
+}
