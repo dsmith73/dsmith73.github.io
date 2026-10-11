@@ -707,3 +707,139 @@ details.role-card .role-details ul li::before {
 
 	.leadership-scope th { background: none; border: solid 1px #bbb; }
 }
+
+
+/* ============================================================
+   FIX #1: CENTER SECTION LIST ITEM TIGHTENING
+   ============================================================ */
+
+#content .list li {
+    padding: 0.35em 0 !important;        /* Was 0.55em 0 — tighter vertical spacing */
+    line-height: 1.5 !important;         /* Better line height */
+    font-size: 0.9rem !important;        /* Slightly smaller text */
+}
+
+#content .list strong {
+    font-weight: 700 !important;
+    color: var(--steel) !important;
+}
+
+/* Tighten section headers */
+#content header h2 {
+    margin-bottom: 0.25em !important;    /* Was 0.35em */
+}
+
+#content header h3 {
+    margin-top: 0 !important;
+    margin-bottom: 0.5em !important;
+}
+
+/* Tighten the button area */
+#content .list + .button {
+    margin-top: 1em !important;          /* Reduced spacing before button */
+}
+
+/* Tighten the "Who am I?" paragraph */
+#content p {
+    line-height: 1.65 !important;        /* Better readability */
+}
+
+
+/* ============================================================
+   FIX #2: FOOTER ICON DISPLAY
+   ============================================================ */
+
+/* Ensure Font Awesome icons render properly */
+.link-list a i:before,
+.link-list a .fa-github:before,
+.link-list a .fa-linkedin:before,
+.link-list a .fa-envelope:before,
+.link-list a .fa-file:before {
+    content: "\f09b" !important;         /* Fallback if FA doesn't load */
+    font-family: "Font Awesome 5 Free" !important;
+    font-weight: 900 !important;
+    font-size: 1.2rem !important;
+    color: var(--steel) !important;
+}
+
+/* Specific icon overrides */
+.link-list a .fa-github:before { content: "\f09b" !important; }       /* GitHub */
+.link-list a .fa-linkedin:before { content: "\f0e1" !important; }     /* LinkedIn */
+.link-list a .fa-envelope:before { content: "\f0e0" !important; }     /* Email */
+.link-list a .fa-file:before { content: "\f0c5" !important; }         /* Resume */
+.link-list a .fa-gitlab:before { content: "\f296" !important; }       /* GitLab */
+
+/* Make sure icons are visible */
+.link-list a i,
+.link-list a [class^="fa-"] {
+    font-size: 1.1rem !important;
+    color: var(--steel) !important;
+    display: inline-block !important;
+    width: 1.2rem !important;
+    text-align: center !important;
+}
+
+/* Hide the text labels if they exist */
+.link-list a .label {
+    display: none !important;
+}
+
+
+/* ============================================================
+   FIX #3: RESUME BULLET ALIGNMENT & FOOTER
+   ============================================================ */
+
+/* Better bullet indentation */
+details.role-card .role-details ul li {
+    padding: 0.45em 0 0.45em 1.35em !important;  /* More left padding for bullets */
+    position: relative !important;
+    line-height: 1.6 !important;              /* Better line spacing */
+}
+
+/* Custom bullet character */
+details.role-card .role-details ul li::before {
+    content: "\2022" !important;               /* Standard bullet char */
+    color: var(--navy) !important;
+    font-weight: bold !important;
+    position: absolute !important;
+    left: 0.25em !important;                  /* Fine-tune bullet position */
+    line-height: 1.6 !important;
+}
+
+/* Tighten role card summary font */
+details.role-card summary {
+    font-size: 1rem !important;               /* Slightly larger font */
+    line-height: 1.4 !important;
+}
+
+details.role-card summary .dates {
+    font-size: 0.85rem !important;
+    line-height: 1.5 !important;
+}
+
+/* Fix resume footer layout */
+#footer .link-list {
+    justify-content: center !important;       /* Center the icons */
+    gap: 1.5rem !important;                   /* More space between icons */
+    padding: 1em 0 !important;
+}
+
+#footer .link-list a {
+    width: 3rem !important;                   /* Larger clickable area */
+    height: 3rem !important;
+    font-size: 1.3rem !important;             /* Larger icon size */
+    border-radius: 8px !important;
+}
+
+/* Add proper spacing before resume footer */
+#main + #footer {
+    margin-top: 2rem !important;
+}
+
+/* Remove extra spacing after last role card */
+details.role-card:last-child {
+    margin-bottom: 1rem !important;
+}
+
+
+
