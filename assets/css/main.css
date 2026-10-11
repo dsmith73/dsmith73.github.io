@@ -842,4 +842,217 @@ details.role-card:last-child {
 }
 
 
+/* ============================================================
+   RESUME-SPECIFIC STYLING (matches PDF resume structure)
+   ============================================================ */
+
+/* Leadership scope table - clean borders */
+.leadership-scope table {
+    border-collapse: collapse !important;
+    margin: 1.5rem 0 2.5rem 0 !important;
+}
+
+.leadership-scope th {
+    background: var(--bg-wash) !important;
+    width: 35% !important;
+}
+
+.leadership-scope tr:nth-child(even) td {
+    background: var(--bg-offwhite) !important;
+}
+
+/* Signature achievements - clean list */
+.signature-achievements {
+    list-style: none !important;
+}
+
+.signature-achievements li {
+    padding: 0.5rem 0 !important;
+    border-bottom: 1px solid var(--border-soft) !important;
+}
+
+/* Role blocks - full content matching PDF */
+.role-block {
+    margin-bottom: 2rem !important;
+    page-break-inside: avoid !important;
+}
+
+.role-block h3 {
+    color: var(--text-dark) !important;
+    font-size: 1.2rem !important;
+    margin-bottom: 0.2rem !important;
+}
+
+.role-block .meta {
+    color: var(--slate) !important;
+    font-style: italic !important;
+    font-size: 0.95rem !important;
+    margin-bottom: 0.75rem !important;
+}
+
+.role-block .overview {
+    color: var(--text-body) !important;
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 1rem !important;
+}
+
+.role-block h4 {
+    color: var(--steel) !important;
+    font-size: 0.95rem !important;
+    font-weight: 700 !important;
+    margin: 1rem 0 0.5rem 0 !important;
+}
+
+.role-block ul {
+    list-style: none !important;
+    margin: 0.5rem 0 !important;
+    padding-left: 1.25rem !important;
+}
+
+.role-block ul li {
+    position: relative !important;
+    padding: 0.45rem 0 0.45rem 1.35rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 0 !important;
+}
+
+.role-block ul li::before {
+    content: "\2022" !important;
+    color: var(--navy) !important;
+    font-weight: bold !important;
+    position: absolute !important;
+    left: 0.25rem !important;
+}
+
+/* Scope row (table-like layout) */
+.scope-row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 1rem !important;
+    padding: 0.75rem 0 !important;
+    margin-bottom: 1rem !important;
+    background: var(--bg-wash) !important;
+    border-left: 3px solid var(--steel) !important;
+}
+
+.scope-item {
+    padding: 0.35rem 0.75rem !important;
+    font-size: 0.9rem !important;
+}
+
+.scope-item strong {
+    color: var(--navy) !important;
+}
+
+/* Skill groups - tight layout */
+.skill-groups {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+    gap: 1.5rem !important;
+    margin: 1.5rem 0 !important;
+}
+
+.skill-group {
+    background: var(--bg-wash) !important;
+    border-radius: 6px !important;
+    padding: 1.25rem !important;
+}
+
+.skill-group h3 {
+    color: var(--navy) !important;
+    font-size: 0.9rem !important;
+    margin-bottom: 0.75rem !important;
+}
+
+.skill-tags {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.5rem !important;
+    list-style: none !important;
+    padding: 0 !important;
+}
+
+.skill-tags li {
+    background: var(--bg-white) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 20px !important;
+    padding: 0.4rem 0.85rem !important;
+    font-size: 0.85rem !important;
+}
+
+/* Footer icons on resume page */
+#footer .link-list {
+    justify-content: center !important;
+    gap: 1.5rem !important;
+    padding: 1.5rem 0 !important;
+}
+
+#footer .link-list a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 3.5rem !important;
+    height: 3.5rem !important;
+    border-radius: 8px !important;
+    font-size: 1.4rem !important;
+    color: var(--steel) !important;
+}
+
+#footer .link-list a:hover {
+    background: var(--steel) !important;
+    color: white !important;
+}
+
+#footer .link-list a .label {
+    display: none !important;
+}
+
+/* Print optimization */
+@media print {
+    #nav, #footer, #copyright, .button {
+        display: none !important;
+    }
+    
+    #header {
+        background: none !important;
+        padding: 0 !important;
+        color: black !important;
+    }
+    
+    #header h1 {
+        color: black !important;
+    }
+    
+    .role-block {
+        page-break-inside: avoid !important;
+    }
+    
+    a {
+        color: black !important;
+    }
+}
+
+/* Mobile responsive */
+@media (max-width: 736px) {
+    .role-block h3 {
+        font-size: 1.1rem !important;
+    }
+    
+    .scope-row {
+        flex-direction: column !important;
+        gap: 0.5rem !important;
+    }
+    
+    .skill-groups {
+        grid-template-columns: 1fr !important;
+    }
+    
+    #footer .link-list a {
+        width: 3rem !important;
+        height: 3rem !important;
+    }
+}
+
+
 
