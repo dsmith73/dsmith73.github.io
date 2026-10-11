@@ -1,274 +1,709 @@
-/* ===================================
-   DANIEL SMITH - EXECUTIVE OVERRIDES
-   High-specificity CSS to override HTML5 UP framework
-   =================================== */
+/*
+	DANIEL SMITH — dsmith73.github.io
+	Complete stylesheet for index.html + resume.html
+	Palette: Steel Blue / Slate Grey
+*/
 
-/* FORCE ROOT VARIABLES */
-/* STEEL BLUE / SLATE GREY EXECUTIVE PALETTE */
+/* ============================================================
+   1. VARIABLES & RESET
+   ============================================================ */
+
 :root {
-    --primary-color: #2e5c8a;      /* steel blue */
-    --primary-dark: #1f4468;      /* navy */
-    --primary-light: #4a7fb5;
-    --accent-grey: #64748b;       /* slate */
-    --text-dark: #1e293b;
-    --text-light: #475569;
-    --bg-white: #ffffff;
-    --bg-light: #f1f5f9;          /* light slate wash */
-    --bg-offwhite: #f8fafc;
-    --border-gray: #cbd5e1;
+	--navy:        #1f4468;
+	--steel:       #2e5c8a;
+	--steel-light: #4a7fb5;
+	--slate:       #64748b;
+	--text-dark:   #1e293b;
+	--text-body:   #334155;
+	--text-light:  #64748b;
+	--bg-white:    #ffffff;
+	--bg-wash:     #f1f5f9;
+	--bg-offwhite: #f8fafc;
+	--border:      #cbd5e1;
+	--border-soft: #e2e8f0;
 }
 
-/* OVERRIDE ALL HEADINGS */
-#header h1, h1, h2, h3, h4, h5, h6 {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-    font-weight: 700 !important;
-}
-
-#header h1 {
-    font-size: 2.75rem !important;
-    color: white !important;
-}
-
-/* HEADER SECTION - FORCED PURPLE GRADIENT */
-#header {
-    background: linear-gradient(135deg, #6d4aff 0%, #4a3ab8 100%) !important;
-    color: white !important;
-}
-
-#header h1, #header h1 a, #header a#logo {
-    color: white !important;
-}
-
-#header p {
-    color: white !important;
-}
-
-/* NAVIGATION LINKS */
-#nav a {
-    color: white !important;
-    font-weight: 600 !important;
-}
-
-#nav a:hover {
-    color: white !important;
-    text-decoration: underline !important;
-}
-
-/* BANNER SECTION */
-#banner {
-    background: rgba(109, 74, 255, 0.1) !important;
-}
-
-/* FEATURES GRID - WHITE BACKGROUNDS */
-#features {
-    background: #ffffff !important;
-}
-
-.bordered-feature-image {
-    border-radius: 8px !important;
-    overflow: hidden !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
-}
-
-.bordered-feature-image img {
-    width: 100% !important;
-    height: auto !important;
-}
-
-#features h2 {
-    color: #6d4aff !important;
-    font-size: 1.5rem !important;
-}
-
-/* CONTENT SECTION - CLEAN WHITESPACE */
-#content {
-    background: #ffffff !important;
-}
-
-#content h2 {
-    color: #6d4aff !important;
-    font-size: 1.75rem !important;
-}
-
-#content h3 {
-    color: #555 !important;
-    font-weight: 500 !important;
-}
-
-/* LIST STYLING - NO DEFAULT MARKERS */
-.list, .quote-list, .link-list {
-    list-style: none !important;
-    padding-left: 0 !important;
-}
-
-.list li {
-    padding: 0.75rem 0 !important;
-    border-bottom: 1px solid #e0e0e0 !important;
-}
-
-.list li:last-child {
-    border-bottom: none !important;
-}
-
-/* FOOTER SECTION */
-#footer {
-    background: #f8f9fa !important;
-    border-top: 3px solid #6d4aff !important;
-}
-
-#footer h2 {
-    color: #6d4aff !important;
-    font-size: 1.5rem !important;
-}
-
-.link-list a {
-    color: #6d4aff !important;
-    font-weight: 500 !important;
-}
-
-/* COPYRIGHT BAR */
-#copyright {
-    background: #1a1a1a !important;
-    color: white !important;
-}
-
-#copyright a {
-    color: #6d4aff !important;
-}
-
-/* BUTTONS - PRIMARY COLOR */
-.button, input[type="submit"], input[type="reset"], button {
-    background: #6d4aff !important;
-    color: white !important;
-    border: none !important;
-    font-weight: 600 !important;
-    padding: 0.75rem 1.5rem !important;
-    border-radius: 4px !important;
-}
-
-.button:hover, button:hover {
-    background: #4a3ab8 !important;
-    color: white !important;
-}
-
-/* RESPONSIVE FIXES */
-@media (max-width: 736px) {
-    #header h1 {
-        font-size: 2rem !important;
-    }
-    
-    #nav {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        justify-content: center !important;
-    }
-    
-    #nav a {
-        margin: 0.25rem !important;
-        padding: 0.4rem 0.8rem !important;
-    }
-}
-
-/* CLEAR ANY OLD STYLES THAT MIGHT COME FROM OTHER FILES */
 * {
-    margin: 0;
-    padding: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 16pt;
+	scroll-behavior: smooth;
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif !important;
-    line-height: 1.7 !important;
+	background: var(--bg-white);
+	color: var(--text-body);
+	font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+		"Segoe UI", Roboto, Arial, sans-serif;
+	font-size: 1rem;
+	line-height: 1.75;
+	-webkit-font-smoothing: antialiased;
 }
 
-/* RESUME-SPECIFIC: TABLE STYLING */
-.leadership-scope table {
-    width: 100% !important;
-    border-collapse: collapse !important;
-    margin: 2rem 0 !important;
+/* ============================================================
+   2. TYPOGRAPHY
+   ============================================================ */
+
+h1, h2, h3, h4, h5, h6 {
+	color: var(--text-dark);
+	font-weight: 700;
+	line-height: 1.3;
+	margin: 0 0 0.75em 0;
+	text-transform: none;
 }
 
-.leadership-scope th,
-.leadership-scope td {
-    border: 1px solid #e0e0e0 !important;
-    padding: 1rem !important;
-    text-align: left !important;
-}
+h1 { font-size: 2.25rem; }
+h2 { font-size: 1.5rem; color: var(--steel); }
+h3 { font-size: 1.1rem; color: var(--slate); font-weight: 400; }
 
-.leadership-scope th {
-    background: #6d4aff !important;
-    color: white !important;
-}
+p { margin: 0 0 1.25em 0; }
 
-.leadership-scope tr:nth-child(even) {
-    background: #f8f9fa !important;
-}
+strong, b { color: var(--text-dark); }
 
-/* COLLAPSIBLE CARDS FOR EXPERIENCE */
-details.role-card {
-    margin-bottom: 1rem !important;
-    border: 1px solid #e0e0e0 !important;
-    border-radius: 8px !important;
-    background: white !important;
-}
-
-details.role-card summary {
-    background: #f8f9fa !important;
-    font-weight: 600 !important;
-    padding: 1rem !important;
-    cursor: pointer !important;
-}
-
-details.role-card .role-details {
-    padding: 1rem !important;
-    background: #fafafa !important;
-}
-
-.skill-tags {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    gap: 0.5rem !important;
-}
-
-.skill-tags li {
-    background: #f8f9fa !important;
-    padding: 0.5rem 1rem !important;
-    border-radius: 20px !important;
-    font-size: 0.85rem !important;
-    border: 1px solid #e0e0e0 !important;
-}
-
-/* IMAGE STYLING */
-img {
-    max-width: 100% !important;
-    height: auto !important;
-}
-
-.feature-image img, .bordered-feature-image img {
-    border-radius: 8px !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
-}
-
-/* VIDEO ELEMENT */
-#circuit {
-    max-width: 100% !important;
-    border-radius: 8px !important;
-}
-
-/* SPACING BETWEEN SECTIONS */
-section {
-    margin-bottom: 2rem !important;
-}
-
-.container {
-    padding: 0 2rem !important;
-}
-
-/* REMOVE ANY BLUE HYPERLINK DEFAULTS */
 a {
-    color: #6d4aff !important;
-    text-decoration: none !important;
+	color: var(--steel);
+	text-decoration: none;
+	border-bottom: dotted 1px var(--steel-light);
+	transition: color 0.15s ease;
 }
 
 a:hover {
-    text-decoration: underline !important;
+	color: var(--navy);
+	border-bottom-color: var(--navy);
+}
+
+ul { list-style: none; }
+
+hr {
+	border: 0;
+	border-top: solid 1px var(--border);
+	margin: 2em 0;
+}
+
+/* ============================================================
+   3. LAYOUT GRID
+   ============================================================ */
+
+#page-wrapper {
+	overflow-x: hidden;
+}
+
+.container {
+	max-width: 1180px;
+	margin: 0 auto;
+	padding: 0 2rem;
+	width: 100%;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -1rem;
+}
+
+.row > * {
+	padding: 0 1rem;
+}
+
+/* Widths */
+.col-12 { width: 100%; }
+.col-6  { width: 50%; }
+.col-4  { width: 33.33333%; }
+.col-3  { width: 25%; }
+.col-1  { width: 8.33333%; }
+
+/* Alignment helpers */
+.row.aln-center { justify-content: center; }
+
+/* Importance (swap order on medium screens) */
+.imp-medium { order: -1; }
+
+/* ============================================================
+   4. HEADER (shared: index + resume)
+   ============================================================ */
+
+#header {
+	background: linear-gradient(160deg, var(--navy) 0%, var(--steel) 100%);
+	color: #ffffff;
+	padding: 2.5rem 0 0 0;
+	position: relative;
+}
+
+#header h1 {
+	font-size: 2.5rem;
+	margin-bottom: 0.25em;
+	text-align: center;
+}
+
+#logo {
+	color: #ffffff;
+	border-bottom: none;
+	letter-spacing: 0.05em;
+}
+
+#logo:hover {
+	color: #dce9f5;
+	border-bottom: none;
+}
+
+#nav {
+	text-align: center;
+	padding: 1rem 0 1.5rem 0;
+}
+
+#nav a {
+	color: #ffffff;
+	border-bottom: none;
+	font-weight: 600;
+	margin: 0 0.9em;
+	padding: 0.35em 0.7em;
+	border-radius: 4px;
+	display: inline-block;
+}
+
+#nav a:hover {
+	background: rgba(255, 255, 255, 0.15);
+	color: #ffffff;
+}
+
+#nav a.active {
+	background: rgba(255, 255, 255, 0.22);
+}
+
+/* ============================================================
+   5. BANNER (homepage hero + resume contact strip)
+   ============================================================ */
+
+#banner {
+	background: rgba(0, 0, 0, 0.18);
+	padding: 2.25rem 0;
+	border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+#banner p {
+	color: #ffffff;
+	font-size: 1.35rem;
+	font-weight: 300;
+	line-height: 1.6;
+}
+
+#banner a.button {
+	color: #ffffff;
+	border-bottom: none;
+}
+
+#circuit {
+	width: 100%;
+	max-width: 480px;
+	border-radius: 6px;
+	display: block;
+	margin: 0 auto;
+}
+
+/* ============================================================
+   6. BUTTONS
+   ============================================================ */
+
+.button {
+	display: inline-block;
+	background: var(--steel);
+	color: #ffffff;
+	border: none;
+	border-bottom: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-family: inherit;
+	font-size: 0.85rem;
+	font-weight: 700;
+	letter-spacing: 0.05em;
+	padding: 0.75em 1.75em;
+	text-align: center;
+	text-transform: uppercase;
+	transition: background 0.15s ease;
+}
+
+.button:hover {
+	background: var(--navy);
+	color: #ffffff;
+}
+
+.button.alt {
+	background: transparent;
+	border: solid 2px var(--steel);
+	color: var(--steel);
+}
+
+.button.alt:hover {
+	background: var(--steel);
+	color: #ffffff;
+}
+
+/* ============================================================
+   7. FEATURES SECTION (homepage projects)
+   ============================================================ */
+
+#features {
+	background: var(--bg-offwhite);
+	border-top: solid 4px var(--steel);
+	padding: 3rem 0;
+}
+
+#features h2 {
+	font-size: 1.15rem;
+	margin-bottom: 0.4em;
+}
+
+#features p {
+	color: var(--text-light);
+	font-size: 0.9rem;
+	margin: 0;
+}
+
+/* Compact project thumbnails — bordered, native proportions */
+.bordered-feature-image {
+	border: solid 1px var(--border);
+	border-radius: 6px;
+	display: block;
+	margin: 0 0 1em 0;
+	overflow: hidden;
+	padding: 3px;
+	background: #ffffff;
+}
+
+.bordered-feature-image img {
+	border-radius: 4px;
+	display: block;
+	height: auto;
+	width: 100%;
+}
+
+.bordered-feature-image:hover {
+	border-color: var(--steel);
+}
+
+/* ============================================================
+   8. CONTENT SECTION (who am I / what do I do / interests)
+   ============================================================ */
+
+#content {
+	background: var(--bg-white);
+	padding: 3rem 0;
+}
+
+#content header {
+	margin-bottom: 1.25em;
+}
+
+#content header h2 {
+	margin-bottom: 0.35em;
+}
+
+.feature-image {
+	display: block;
+	margin: 0 0 1.25em 0;
+	max-width: 220px;
+}
+
+.feature-image img {
+	border: solid 1px var(--border);
+	border-radius: 6px;
+	display: block;
+	height: auto;
+	width: 100%;
+}
+
+/* Career list ("What do I do?") */
+.list li {
+	border-top: solid 1px var(--border-soft);
+	color: var(--text-body);
+	font-size: 0.95rem;
+	padding: 0.55em 0;
+}
+
+.list li:first-child {
+	border-top: 0;
+	padding-top: 0;
+}
+
+.list li:last-child {
+	padding-bottom: 0;
+}
+
+.list strong {
+	color: var(--steel);
+}
+
+/* Interests list */
+.quote-list {
+	text-align: center;
+}
+
+.quote-list li {
+	margin-bottom: 1.5em;
+}
+
+.quote-list img {
+	border-radius: 50%;
+	border: solid 1px var(--border);
+	display: inline-block;
+	height: 84px;
+	object-fit: cover;
+	width: 84px;
+	margin-bottom: 0.5em;
+}
+
+.quote-list p {
+	color: var(--text-dark);
+	font-size: 0.95rem;
+	font-weight: 600;
+	margin: 0 0 0.25em 0;
+}
+
+.quote-list span {
+	color: var(--slate);
+	font-size: 0.85rem;
+}
+
+/* ============================================================
+   9. MAIN / RESUME SECTION
+   ============================================================ */
+
+#main {
+	background: var(--bg-white);
+	border-top: solid 4px var(--steel);
+	padding: 3rem 0;
+}
+
+#main > .container h2 {
+	border-bottom: solid 2px var(--border);
+	margin-bottom: 1em;
+	padding-bottom: 0.35em;
+}
+
+/* --- Leadership scope table --- */
+
+.leadership-scope {
+	margin-bottom: 2.5rem;
+}
+
+.leadership-scope table {
+	border: solid 1px var(--border);
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.leadership-scope th {
+	background: var(--bg-wash);
+	color: var(--navy);
+	font-size: 0.85rem;
+	font-weight: 700;
+	padding: 0.75em 1em;
+	text-align: left;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	vertical-align: top;
+	width: 32%;
+}
+
+.leadership-scope td {
+	border-top: solid 1px var(--border-soft);
+	padding: 0.75em 1em;
+	vertical-align: top;
+}
+
+.leadership-scope tr:nth-child(even) td {
+	background: var(--bg-offwhite);
+}
+
+/* --- Experience role cards --- */
+
+details.role-card {
+	border: solid 1px var(--border);
+	border-left: solid 4px var(--steel);
+	border-radius: 6px;
+	margin-bottom: 1em;
+	background: #ffffff;
+}
+
+details.role-card summary {
+	align-items: baseline;
+	cursor: pointer;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.25em 1em;
+	justify-content: space-between;
+	list-style: none;
+	padding: 1em 1.25em;
+}
+
+details.role-card summary::-webkit-details-marker {
+	display: none;
+}
+
+details.role-card summary::after {
+	color: var(--steel);
+	content: "\25BC"; /* ▼ */
+	font-size: 0.7em;
+}
+
+details.role-card[open] summary::after {
+	content: "\25B2"; /* ▲ */
+}
+
+details.role-card summary .dates {
+	color: var(--slate);
+	font-size: 0.8rem;
+	font-weight: 400;
+	white-space: nowrap;
+}
+
+details.role-card .role-details {
+	background: var(--bg-offwhite);
+	border-top: solid 1px var(--border-soft);
+	padding: 1em 1.25em;
+}
+
+details.role-card .role-details > p {
+	color: var(--text-light);
+	font-size: 0.95rem;
+	font-style: italic;
+}
+
+details.role-card .role-details ul {
+	margin: 0.75em 0 0.25em 0;
+}
+
+details.role-card .role-details ul li {
+	border-top: dotted 1px var(--border);
+	font-size: 0.92rem;
+	padding: 0.4em 0 0.4em 1.1em;
+	position: relative;
+}
+
+details.role-card .role-details ul li:first-child {
+	border-top: 0;
+}
+
+details.role-card .role-details ul li::before {
+	color: var(--steel);
+	content: "\2022";
+	left: 0;
+	position: absolute;
+}
+
+/* --- Skill groups --- */
+
+.skill-groups {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+	gap: 1.25rem;
+	margin-bottom: 2.5rem;
+}
+
+.skill-group {
+	background: var(--bg-wash);
+	border: solid 1px var(--border-soft);
+	border-radius: 6px;
+	padding: 1.25em;
+}
+
+.skill-group h3 {
+	color: var(--navy);
+	font-size: 0.85rem;
+	font-weight: 700;
+	letter-spacing: 0.05em;
+	margin-bottom: 0.75em;
+	text-transform: uppercase;
+}
+
+.skill-tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.4rem;
+}
+
+.skill-tags li {
+	background: #ffffff;
+	border: solid 1px var(--border);
+	border-radius: 999px;
+	color: var(--text-body);
+	font-size: 0.75rem;
+	padding: 0.3em 0.85em;
+}
+
+/* ============================================================
+   10. FOOTER
+   ============================================================ */
+
+#footer {
+	background: var(--bg-wash);
+	border-top: solid 4px var(--steel);
+	padding: 3rem 0 2rem 0;
+}
+
+#footer h2 {
+	color: var(--navy);
+	font-size: 1.1rem;
+	margin-bottom: 1em;
+}
+
+#footer p {
+	color: var(--text-light);
+	font-size: 0.9rem;
+}
+
+#footer quote {
+	color: var(--navy);
+	font-style: italic;
+}
+
+/* Footer link lists with icons */
+.link-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75em;
+}
+
+.link-list a {
+	align-items: center;
+	border: solid 1px var(--border);
+	border-radius: 6px;
+	color: var(--steel);
+	display: inline-flex;
+	height: 2.75rem;
+	justify-content: center;
+	width: 2.75rem;
+}
+
+.link-list a:hover {
+	background: var(--steel);
+	border-color: var(--steel);
+	color: #ffffff;
+}
+
+/* Icon sizing helper (relies on Font Awesome CSS) */
+.link-list a .label { display: none; }
+
+/* ============================================================
+   11. COPYRIGHT BAR
+   ============================================================ */
+
+#copyright {
+	background: var(--navy);
+	color: #a8c4dc;
+	font-size: 0.75rem;
+	padding: 1.5rem 0;
+	text-align: center;
+}
+
+#copyright a {
+	border-bottom: none;
+	color: #ffffff;
+}
+
+#copyright a:hover {
+	color: #dce9f5;
+}
+
+/* ============================================================
+   12. RESPONSIVE
+   ============================================================ */
+
+/* Wide → medium (tablet) */
+@media (max-width: 980px) {
+
+	html { font-size: 14pt; }
+
+	.col-3 { width: 50%; }
+	.col-4 { width: 50%; }
+	.col-6 { width: 50%; }
+
+	#circuit { max-width: 100%; }
+}
+
+/* Medium → small (phone) */
+@media (max-width: 736px) {
+
+	html { font-size: 13pt; }
+
+	.container { padding: 0 1.25rem; }
+
+	.col-3, .col-4, .col-6 { width: 100%; }
+
+	.imp-medium { order: 0; }
+
+	#header h1 { font-size: 1.75rem; }
+
+	#nav a {
+		display: block;
+		margin: 0.15em 0;
+	}
+
+	#banner { text-align: center; }
+
+	.quote-list img {
+		height: 64px;
+		width: 64px;
+	}
+
+	.leadership-scope th,
+	.leadership-scope td {
+		display: block;
+		padding: 0.5em 0.75em;
+		width: 100%;
+	}
+
+	.leadership-scope tr { display: block; }
+
+	.skill-groups { grid-template-columns: 1fr; }
+
+	details.role-card summary { flex-direction: column; align-items: flex-start; }
+}
+
+/* ============================================================
+   13. PRINT (Ctrl+P — expands all role cards automatically)
+   ============================================================ */
+
+@media print {
+
+	body {
+		background: #ffffff;
+		color: #000000;
+		font-size: 10.5pt;
+	}
+
+	#nav, #banner, #footer, #copyright,
+	script, .button {
+		display: none !important;
+	}
+
+	#header {
+		background: none;
+		color: #000000;
+		padding: 0;
+	}
+
+	#header h1 { color: #000000; font-size: 20pt; }
+
+	#main, #features, #content {
+		border: none;
+		padding: 0;
+	}
+
+	/* Force every role card open when printing */
+	details.role-card { border: solid 1px #bbb; page-break-inside: avoid; }
+	details.role-card[open] summary::after { content: ""; }
+	details.role-card > summary::after { content: "" !important; }
+	details.role-card > *:not(summary) { display: block !important; }
+	details.role-card .role-details { background: none; border: none; padding: 0.25em 0; }
+
+	a { border-bottom: none; color: #000000; }
+
+	h2 { color: #000000; }
+
+	.leadership-scope th { background: none; border: solid 1px #bbb; }
 }
